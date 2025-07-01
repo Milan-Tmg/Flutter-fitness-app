@@ -7,26 +7,26 @@ import "/theme/app_theme.dart";
 import "package:flutter/services.dart";
 
 Future<void> main() async {
+  
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: backgroundColor,
+    ),
+  );
+  
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(
-      Builder(
-          builder: (context){
-            return ScreenUtilInit(
-                builder: (context,child){
-                  SystemUiOverlayStyle(
-                    statusBarColor: backgroundColor,
-                  );
-
-                  return MaterialApp(
-                    debugShowCheckedModeBanner: false,
-                    theme: ThemeData(
-                      scaffoldBackgroundColor: backgroundColor,
-                    ),
-                    home: FitnessApp(),
-                  );
-                }
+      ScreenUtilInit(
+        designSize: Size(375,812),
+          builder: (context,child){
+            return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                scaffoldBackgroundColor: backgroundColor,
+              ),
+              home: FitnessApp(),
             );
           }
       ),
