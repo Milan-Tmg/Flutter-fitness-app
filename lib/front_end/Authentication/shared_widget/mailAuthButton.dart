@@ -13,17 +13,7 @@ class MailAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        print("Mail Auth formKey: $formKey");
-        mailAuthLogic(formKey: formKey);
-        // if(mailAuthLogic(formKey: formKey)){
-        //   print("Successfully validated form");
-        // }
-        // Navigator.pushReplacement(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => Placeholder(),
-        //   ),
-        // );
+        mailAuthLogic(formKey: formKey, context: context);
       },
       child: Container(
         height: 50.h,

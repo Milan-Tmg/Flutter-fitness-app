@@ -17,6 +17,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  bool isAuthenticated = false;
+
   runApp(
       ScreenUtilInit(
         designSize: Size(375,812),
