@@ -2,9 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_app/firebase_options.dart';
 import 'package:flutter_fitness_app/front_end/splashScreen/splashScreen_view.dart';
+import 'package:flutter_fitness_app/front_end/userProfile/userProfile_view.dart';
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "/theme/app_theme.dart";
 import "package:flutter/services.dart";
+import "package:flutter_riverpod/flutter_riverpod.dart";
 
 Future<void> main() async {
   
@@ -20,17 +22,19 @@ Future<void> main() async {
   bool isAuthenticated = false;
 
   runApp(
-      ScreenUtilInit(
-        designSize: Size(375,812),
-          builder: (context,child){
-            return MaterialApp(
-              debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                scaffoldBackgroundColor: backgroundColor,
-              ),
-              home: FitnessApp(),
-            );
-          }
+      ProviderScope(
+        child: ScreenUtilInit(
+          designSize: Size(375,812),
+            builder: (context,child){
+              return MaterialApp(
+                debugShowCheckedModeBanner: false,
+                theme: ThemeData(
+                  scaffoldBackgroundColor: backgroundColor,
+                ),
+                home: FitnessApp(), // replace it with FitnessApp()
+              );
+            }
+        ),
       ),
   );
 }

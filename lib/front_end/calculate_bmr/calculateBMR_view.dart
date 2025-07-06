@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:flutter_fitness_app/State_mangement/user_details.dart";
+import "package:flutter_riverpod/flutter_riverpod.dart";
 import "package:flutter_fitness_app/front_end/calculate_bmr/widgets/activity_level.dart";
 import "package:flutter_fitness_app/front_end/calculate_bmr/widgets/calculate_bmr.dart";
 import "package:flutter_fitness_app/front_end/calculate_bmr/widgets/getAge.dart";
@@ -8,24 +10,22 @@ import "package:flutter_fitness_app/front_end/calculate_bmr/widgets/getWeight.da
 import "package:flutter_screenutil/flutter_screenutil.dart";
 import "/../../theme/app_theme.dart";
 
-class CalculatebmrView extends StatefulWidget {
+class CalculatebmrView extends ConsumerStatefulWidget {
   const CalculatebmrView({super.key});
 
   @override
-  State<CalculatebmrView> createState() => _CalculatebmrViewState();
+  ConsumerState<CalculatebmrView> createState() => _CalculatebmrViewState();
 }
 
-class _CalculatebmrViewState extends State<CalculatebmrView> {
-
-  // variables to store user data
-  TextEditingController selectGender = TextEditingController();
-  TextEditingController age= TextEditingController() ;
-  TextEditingController weight = TextEditingController();
-  TextEditingController height = TextEditingController();
-  TextEditingController selected_activity = TextEditingController();
+class _CalculatebmrViewState extends ConsumerState<CalculatebmrView> {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController age = ref.watch(details).age;
+    TextEditingController weight = ref.watch(details).weight;
+    TextEditingController height = ref.watch(details).height;
+    TextEditingController selected_activity = ref.watch(details).selected_activity;
+    TextEditingController selectGender = ref.watch(details).selectGender;
     return Scaffold(
       body: SizedBox(
         height: 1.sh,

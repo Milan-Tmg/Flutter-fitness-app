@@ -8,7 +8,7 @@ void BRM_calculation({
   required TextEditingController activity,
   required TextEditingController gender,
 }){
-  if(age.text.isNotEmpty && weight.text.isNotEmpty && height.text.isNotEmpty & gender.text.isNotEmpty)
+  if(age.text.isNotEmpty && weight.text.isNotEmpty && height.text.isNotEmpty && gender.text.isNotEmpty)
     {
       double ageValue = double.parse(age.text);
       double weightValue = double.parse(weight.text);
